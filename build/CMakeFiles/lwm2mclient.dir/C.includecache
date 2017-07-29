@@ -29,6 +29,8 @@ ctype.h
 -
 sys/select.h
 -
+sys/sysinfo.h
+-
 sys/types.h
 -
 sys/socket.h

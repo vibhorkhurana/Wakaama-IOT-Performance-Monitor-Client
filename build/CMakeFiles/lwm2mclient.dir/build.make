@@ -46,7 +46,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/pi/wakaama/client
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/wakaama/build3
+CMAKE_BINARY_DIR = /home/pi/wakaama/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/lwm2mclient.dir/depend.make
@@ -59,7 +59,7 @@ include CMakeFiles/lwm2mclient.dir/flags.make
 
 CMakeFiles/lwm2mclient.dir/lwm2mclient.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/lwm2mclient.c.o: /home/pi/wakaama/client/lwm2mclient.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/lwm2mclient.dir/lwm2mclient.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/lwm2mclient.dir/lwm2mclient.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/lwm2mclient.c.o   -c /home/pi/wakaama/client/lwm2mclient.c
 
 CMakeFiles/lwm2mclient.dir/lwm2mclient.c.i: cmake_force
@@ -83,7 +83,7 @@ CMakeFiles/lwm2mclient.dir/lwm2mclient.c.o.provides.build: CMakeFiles/lwm2mclien
 
 CMakeFiles/lwm2mclient.dir/system_api.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/system_api.c.o: /home/pi/wakaama/client/system_api.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/lwm2mclient.dir/system_api.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/lwm2mclient.dir/system_api.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/system_api.c.o   -c /home/pi/wakaama/client/system_api.c
 
 CMakeFiles/lwm2mclient.dir/system_api.c.i: cmake_force
@@ -107,7 +107,7 @@ CMakeFiles/lwm2mclient.dir/system_api.c.o.provides.build: CMakeFiles/lwm2mclient
 
 CMakeFiles/lwm2mclient.dir/object_security.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/object_security.c.o: /home/pi/wakaama/client/object_security.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/lwm2mclient.dir/object_security.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/lwm2mclient.dir/object_security.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/object_security.c.o   -c /home/pi/wakaama/client/object_security.c
 
 CMakeFiles/lwm2mclient.dir/object_security.c.i: cmake_force
@@ -131,7 +131,7 @@ CMakeFiles/lwm2mclient.dir/object_security.c.o.provides.build: CMakeFiles/lwm2mc
 
 CMakeFiles/lwm2mclient.dir/object_server.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/object_server.c.o: /home/pi/wakaama/client/object_server.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/lwm2mclient.dir/object_server.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/lwm2mclient.dir/object_server.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/object_server.c.o   -c /home/pi/wakaama/client/object_server.c
 
 CMakeFiles/lwm2mclient.dir/object_server.c.i: cmake_force
@@ -155,7 +155,7 @@ CMakeFiles/lwm2mclient.dir/object_server.c.o.provides.build: CMakeFiles/lwm2mcli
 
 CMakeFiles/lwm2mclient.dir/object_device.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/object_device.c.o: /home/pi/wakaama/client/object_device.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/lwm2mclient.dir/object_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/lwm2mclient.dir/object_device.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/object_device.c.o   -c /home/pi/wakaama/client/object_device.c
 
 CMakeFiles/lwm2mclient.dir/object_device.c.i: cmake_force
@@ -179,7 +179,7 @@ CMakeFiles/lwm2mclient.dir/object_device.c.o.provides.build: CMakeFiles/lwm2mcli
 
 CMakeFiles/lwm2mclient.dir/object_firmware.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/object_firmware.c.o: /home/pi/wakaama/client/object_firmware.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/lwm2mclient.dir/object_firmware.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/lwm2mclient.dir/object_firmware.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/object_firmware.c.o   -c /home/pi/wakaama/client/object_firmware.c
 
 CMakeFiles/lwm2mclient.dir/object_firmware.c.i: cmake_force
@@ -203,7 +203,7 @@ CMakeFiles/lwm2mclient.dir/object_firmware.c.o.provides.build: CMakeFiles/lwm2mc
 
 CMakeFiles/lwm2mclient.dir/object_location.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/object_location.c.o: /home/pi/wakaama/client/object_location.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/lwm2mclient.dir/object_location.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/lwm2mclient.dir/object_location.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/object_location.c.o   -c /home/pi/wakaama/client/object_location.c
 
 CMakeFiles/lwm2mclient.dir/object_location.c.i: cmake_force
@@ -227,7 +227,7 @@ CMakeFiles/lwm2mclient.dir/object_location.c.o.provides.build: CMakeFiles/lwm2mc
 
 CMakeFiles/lwm2mclient.dir/object_connectivity_moni.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/object_connectivity_moni.c.o: /home/pi/wakaama/client/object_connectivity_moni.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/lwm2mclient.dir/object_connectivity_moni.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/lwm2mclient.dir/object_connectivity_moni.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/object_connectivity_moni.c.o   -c /home/pi/wakaama/client/object_connectivity_moni.c
 
 CMakeFiles/lwm2mclient.dir/object_connectivity_moni.c.i: cmake_force
@@ -251,7 +251,7 @@ CMakeFiles/lwm2mclient.dir/object_connectivity_moni.c.o.provides.build: CMakeFil
 
 CMakeFiles/lwm2mclient.dir/object_connectivity_stat.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/object_connectivity_stat.c.o: /home/pi/wakaama/client/object_connectivity_stat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/lwm2mclient.dir/object_connectivity_stat.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/lwm2mclient.dir/object_connectivity_stat.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/object_connectivity_stat.c.o   -c /home/pi/wakaama/client/object_connectivity_stat.c
 
 CMakeFiles/lwm2mclient.dir/object_connectivity_stat.c.i: cmake_force
@@ -275,7 +275,7 @@ CMakeFiles/lwm2mclient.dir/object_connectivity_stat.c.o.provides.build: CMakeFil
 
 CMakeFiles/lwm2mclient.dir/object_access_control.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/object_access_control.c.o: /home/pi/wakaama/client/object_access_control.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/lwm2mclient.dir/object_access_control.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/lwm2mclient.dir/object_access_control.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/object_access_control.c.o   -c /home/pi/wakaama/client/object_access_control.c
 
 CMakeFiles/lwm2mclient.dir/object_access_control.c.i: cmake_force
@@ -299,7 +299,7 @@ CMakeFiles/lwm2mclient.dir/object_access_control.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/lwm2mclient.dir/performance_object.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/performance_object.c.o: /home/pi/wakaama/client/performance_object.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/lwm2mclient.dir/performance_object.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/lwm2mclient.dir/performance_object.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/performance_object.c.o   -c /home/pi/wakaama/client/performance_object.c
 
 CMakeFiles/lwm2mclient.dir/performance_object.c.i: cmake_force
@@ -323,7 +323,7 @@ CMakeFiles/lwm2mclient.dir/performance_object.c.o.provides.build: CMakeFiles/lwm
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/liblwm2m.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/liblwm2m.c.o: /home/pi/wakaama/core/liblwm2m.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/liblwm2m.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/liblwm2m.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/liblwm2m.c.o   -c /home/pi/wakaama/core/liblwm2m.c
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/liblwm2m.c.i: cmake_force
@@ -347,7 +347,7 @@ CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/liblwm2m.c.o.provides.build: CMa
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/uri.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/uri.c.o: /home/pi/wakaama/core/uri.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/uri.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/uri.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/uri.c.o   -c /home/pi/wakaama/core/uri.c
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/uri.c.i: cmake_force
@@ -371,7 +371,7 @@ CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/uri.c.o.provides.build: CMakeFil
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/utils.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/utils.c.o: /home/pi/wakaama/core/utils.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/utils.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/utils.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/utils.c.o   -c /home/pi/wakaama/core/utils.c
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/utils.c.i: cmake_force
@@ -395,7 +395,7 @@ CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/utils.c.o.provides.build: CMakeF
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/objects.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/objects.c.o: /home/pi/wakaama/core/objects.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/objects.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/objects.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/objects.c.o   -c /home/pi/wakaama/core/objects.c
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/objects.c.i: cmake_force
@@ -419,7 +419,7 @@ CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/objects.c.o.provides.build: CMak
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/tlv.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/tlv.c.o: /home/pi/wakaama/core/tlv.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/tlv.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/tlv.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/tlv.c.o   -c /home/pi/wakaama/core/tlv.c
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/tlv.c.i: cmake_force
@@ -443,7 +443,7 @@ CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/tlv.c.o.provides.build: CMakeFil
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/data.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/data.c.o: /home/pi/wakaama/core/data.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/data.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/data.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/data.c.o   -c /home/pi/wakaama/core/data.c
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/data.c.i: cmake_force
@@ -467,7 +467,7 @@ CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/data.c.o.provides.build: CMakeFi
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/list.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/list.c.o: /home/pi/wakaama/core/list.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/list.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/list.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/list.c.o   -c /home/pi/wakaama/core/list.c
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/list.c.i: cmake_force
@@ -491,7 +491,7 @@ CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/list.c.o.provides.build: CMakeFi
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/packet.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/packet.c.o: /home/pi/wakaama/core/packet.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/packet.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/packet.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/packet.c.o   -c /home/pi/wakaama/core/packet.c
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/packet.c.i: cmake_force
@@ -515,7 +515,7 @@ CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/packet.c.o.provides.build: CMake
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/transaction.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/transaction.c.o: /home/pi/wakaama/core/transaction.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/transaction.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/transaction.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/transaction.c.o   -c /home/pi/wakaama/core/transaction.c
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/transaction.c.i: cmake_force
@@ -539,7 +539,7 @@ CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/transaction.c.o.provides.build: 
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/registration.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/registration.c.o: /home/pi/wakaama/core/registration.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/registration.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/registration.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/registration.c.o   -c /home/pi/wakaama/core/registration.c
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/registration.c.i: cmake_force
@@ -563,7 +563,7 @@ CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/registration.c.o.provides.build:
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/bootstrap.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/bootstrap.c.o: /home/pi/wakaama/core/bootstrap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/bootstrap.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/bootstrap.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/bootstrap.c.o   -c /home/pi/wakaama/core/bootstrap.c
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/bootstrap.c.i: cmake_force
@@ -587,7 +587,7 @@ CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/bootstrap.c.o.provides.build: CM
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/management.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/management.c.o: /home/pi/wakaama/core/management.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/management.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/management.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/management.c.o   -c /home/pi/wakaama/core/management.c
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/management.c.i: cmake_force
@@ -611,7 +611,7 @@ CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/management.c.o.provides.build: C
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/observe.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/observe.c.o: /home/pi/wakaama/core/observe.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/observe.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/observe.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/observe.c.o   -c /home/pi/wakaama/core/observe.c
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/observe.c.i: cmake_force
@@ -635,7 +635,7 @@ CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/observe.c.o.provides.build: CMak
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/json.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/json.c.o: /home/pi/wakaama/core/json.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/json.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/json.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/json.c.o   -c /home/pi/wakaama/core/json.c
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/json.c.i: cmake_force
@@ -659,7 +659,7 @@ CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/json.c.o.provides.build: CMakeFi
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/discover.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/discover.c.o: /home/pi/wakaama/core/discover.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/discover.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/discover.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/discover.c.o   -c /home/pi/wakaama/core/discover.c
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/discover.c.i: cmake_force
@@ -683,7 +683,7 @@ CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/discover.c.o.provides.build: CMa
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/block1.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/block1.c.o: /home/pi/wakaama/core/block1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/block1.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/block1.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/block1.c.o   -c /home/pi/wakaama/core/block1.c
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/block1.c.i: cmake_force
@@ -707,7 +707,7 @@ CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/block1.c.o.provides.build: CMake
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/er-coap-13/er-coap-13.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/er-coap-13/er-coap-13.c.o: /home/pi/wakaama/core/er-coap-13/er-coap-13.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/er-coap-13/er-coap-13.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/er-coap-13/er-coap-13.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/er-coap-13/er-coap-13.c.o   -c /home/pi/wakaama/core/er-coap-13/er-coap-13.c
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/er-coap-13/er-coap-13.c.i: cmake_force
@@ -731,7 +731,7 @@ CMakeFiles/lwm2mclient.dir/home/pi/wakaama/core/er-coap-13/er-coap-13.c.o.provid
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/commandline.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/commandline.c.o: /home/pi/wakaama/shared/commandline.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/commandline.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/commandline.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/commandline.c.o   -c /home/pi/wakaama/shared/commandline.c
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/commandline.c.i: cmake_force
@@ -755,7 +755,7 @@ CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/commandline.c.o.provides.build
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/platform.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/platform.c.o: /home/pi/wakaama/shared/platform.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/platform.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/platform.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/platform.c.o   -c /home/pi/wakaama/shared/platform.c
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/platform.c.i: cmake_force
@@ -779,7 +779,7 @@ CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/platform.c.o.provides.build: C
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/memtrace.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/memtrace.c.o: /home/pi/wakaama/shared/memtrace.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/memtrace.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/memtrace.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/memtrace.c.o   -c /home/pi/wakaama/shared/memtrace.c
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/memtrace.c.i: cmake_force
@@ -803,7 +803,7 @@ CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/memtrace.c.o.provides.build: C
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/connection.c.o: CMakeFiles/lwm2mclient.dir/flags.make
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/connection.c.o: /home/pi/wakaama/shared/connection.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/connection.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/connection.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/connection.c.o   -c /home/pi/wakaama/shared/connection.c
 
 CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/connection.c.i: cmake_force
@@ -897,7 +897,7 @@ lwm2mclient: CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/memtrace.c.o
 lwm2mclient: CMakeFiles/lwm2mclient.dir/home/pi/wakaama/shared/connection.c.o
 lwm2mclient: CMakeFiles/lwm2mclient.dir/build.make
 lwm2mclient: CMakeFiles/lwm2mclient.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/wakaama/build3/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Linking C executable lwm2mclient"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/wakaama/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Linking C executable lwm2mclient"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lwm2mclient.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -945,6 +945,6 @@ CMakeFiles/lwm2mclient.dir/clean:
 .PHONY : CMakeFiles/lwm2mclient.dir/clean
 
 CMakeFiles/lwm2mclient.dir/depend:
-	cd /home/pi/wakaama/build3 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/wakaama/client /home/pi/wakaama/client /home/pi/wakaama/build3 /home/pi/wakaama/build3 /home/pi/wakaama/build3/CMakeFiles/lwm2mclient.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pi/wakaama/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/wakaama/client /home/pi/wakaama/client /home/pi/wakaama/build /home/pi/wakaama/build /home/pi/wakaama/build/CMakeFiles/lwm2mclient.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/lwm2mclient.dir/depend
 

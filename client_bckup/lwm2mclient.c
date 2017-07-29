@@ -54,10 +54,6 @@
  David Navarro <david.navarro@intel.com>
  Bosch Software Innovations GmbH - Please refer to git log
 
-ChangeLog:
-
-Vibhor 28/07/17 Added the function calls to the new program for performance statistics.
-		Changed as a part of project Implementation
 */
 
 #include "lwm2mclient.h"
@@ -1165,6 +1161,34 @@ int main(int argc, char *argv[])
         return -1;
     }
 
+    // objArray[3] = get_object_firmware();
+    // if (NULL == objArray[3])
+    // {
+    //     fprintf(stderr, "Failed to create Firmware object\r\n");
+    //     return -1;
+    // }
+
+    // objArray[4] = get_object_location();
+    // if (NULL == objArray[4])
+    // {
+    //     fprintf(stderr, "Failed to create location object\r\n");
+    //     return -1;
+    // }
+
+    // objArray[5] = get_test_object();
+    // if (NULL == objArray[5])
+    // {
+    //     fprintf(stderr, "Failed to create test object\r\n");
+    //     return -1;
+    // }
+
+    // objArray[6] = get_object_conn_m();
+    // if (NULL == objArray[6])
+    // {
+    //     fprintf(stderr, "Failed to create connectivity monitoring object\r\n");
+    //     return -1;
+    // }
+
     objArray[3] = get_object_conn_s();
     if (NULL == objArray[3])
     {
@@ -1180,6 +1204,27 @@ int main(int argc, char *argv[])
     }
 
     int instId = 0;
+    // objArray[8] = acc_ctrl_create_object();
+    // if (NULL == objArray[8])
+    // {
+    //     fprintf(stderr, "Failed to create Access Control object\r\n");
+    //     return -1;
+    // }
+    // else if (acc_ctrl_obj_add_inst(objArray[8], instId, 3, 0, serverId)==false)
+    // {
+    //     fprintf(stderr, "Failed to create Access Control object instance\r\n");
+    //     return -1;
+    // }
+    // else if (acc_ctrl_oi_add_ac_val(objArray[8], instId, 0, 0b000000000001111)==false)
+    // {
+    //     fprintf(stderr, "Failed to create Access Control ACL default resource\r\n");
+    //     return -1;
+    // }
+    // else if (acc_ctrl_oi_add_ac_val(objArray[8], instId, 999, 0b000000000000001)==false)
+    // {
+    //     fprintf(stderr, "Failed to create Access Control ACL resource for serverId: 999\r\n");
+    //     return -1;
+    // }
     /*
      * The liblwm2m library is now initialized with the functions that will be in
      * charge of communication
@@ -1460,8 +1505,13 @@ int main(int argc, char *argv[])
     clean_server_object(objArray[1]);
     lwm2m_free(objArray[1]);
     free_object_device(objArray[2]);
+    // free_object_firmware(objArray[3]);
+    // free_object_location(objArray[4]);
+    // free_test_object(objArray[5]);
+    // free_object_conn_m(objArray[6]);
      free_object_conn_s(objArray[3]);
      free_object_performance(objArray[4]);
+    // acl_ctrl_free_object(objArray[8]);
 
 #ifdef MEMORY_TRACE
     if (g_quit == 1)

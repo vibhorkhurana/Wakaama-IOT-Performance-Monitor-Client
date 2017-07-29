@@ -54,10 +54,6 @@
  David Navarro <david.navarro@intel.com>
  Bosch Software Innovations GmbH - Please refer to git log
 
-ChangeLog:
-
-Vibhor 28/07/17 Added the function calls to the new program for performance statistics.
-		Changed as a part of project Implementation
 */
 
 #include "lwm2mclient.h"
@@ -75,7 +71,6 @@ Vibhor 28/07/17 Added the function calls to the new program for performance stat
 #include <stdio.h>
 #include <ctype.h>
 #include <sys/select.h>
-#include <sys/sysinfo.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -92,7 +87,7 @@ Vibhor 28/07/17 Added the function calls to the new program for performance stat
 int g_reboot = 0;
 static int g_quit = 0;
 
-#define OBJ_COUNT 5
+#define OBJ_COUNT 9
 lwm2m_object_t * objArray[OBJ_COUNT];
 
 // only backup security and server objects
@@ -145,22 +140,15 @@ void handle_value_changed(lwm2m_context_t * lwm2mH,
                 return;
             }
             dataP->id = uri->resourceId;
-
             lwm2m_data_encode_nstring(value, valueLength, dataP);
-            printf("%s string",value);
-            printf("%d length",valueLength);
+
             result = object->writeFunc(uri->instanceId, 1, dataP, object);
-            printf("\nbefore 405 %d\n",result);
             if (COAP_405_METHOD_NOT_ALLOWED == result)
             {
                 switch (uri->objectId)
                 {
                 case LWM2M_DEVICE_OBJECT_ID:
                     result = device_change(dataP, object);
-                    break;
-                case TEST_OBJECT_ID:
-                    result = performance_change(dataP,object);
-                    printf("Came here to performance_Device change");
                     break;
                 default:
                     break;
@@ -169,7 +157,6 @@ void handle_value_changed(lwm2m_context_t * lwm2mH,
 
             if (COAP_204_CHANGED != result)
             {
-                printf("%d in 204 wala issue",COAP_204_CHANGED);
                 fprintf(stderr, "Failed to change value!\n");
             }
             else
@@ -542,142 +529,31 @@ syntax_error:
     fprintf(stdout, "Syntax error !\n");
 }
 
-static void calculate_cpu_temp(lwm2m_context_t * context){
-    static time_t next_change_time1 = 0;
+static void update_battery_level(lwm2m_context_t * context)
+{
+    static time_t next_change_time = 0;
     time_t tv_sec;
-    tv_sec = lwm2m_gettime();
-    double temperature;
-    FILE *fp;
-    char value[15];
-    int valueLength,tempint;
-    lwm2m_uri_t uri;
-    int level = rand() % 100;
-    
-    if (tv_sec < 0) return;
-    
-    if (next_change_time1 < tv_sec)
-    {
-        fp = fopen("/sys/class/thermal/thermal_zone0/temp", "r");
-        if(fp==NULL){
-            perror("File not opened");
-            exit(1);
-        }
-        fscanf(fp,"%lf",&temperature);
-        fclose(fp);
-        sleep(1);
-        tempint = temperature;
-        printf("The current CPU temperature is : %d\n",tempint);
 
-        if (lwm2m_stringToUri("/3349/0/5850", 12, &uri))
+    tv_sec = lwm2m_gettime();
+    if (tv_sec < 0) return;
+
+    if (next_change_time < tv_sec)
+    {
+        char value[15];
+        int valueLength;
+        lwm2m_uri_t uri;
+        int level = rand() % 100;
+
+        if (0 > level) level = -level;
+        if (lwm2m_stringToUri("/3/0/9", 6, &uri))
         {
-            
-            valueLength = sprintf(value, "%d", tempint);
-            fprintf(stderr, "\nNew System Temperature: %d\n", tempint);
+            valueLength = sprintf(value, "%d", level);
+            fprintf(stderr, "New Battery Level: %d\n", level);
             handle_value_changed(context, &uri, value, valueLength);
         }
-
         level = rand() % 20;
         if (0 > level) level = -level;
-        next_change_time1 = tv_sec + level + 10;
-    }
-}
-
-static void calculate_cpu_loadavg(lwm2m_context_t * context){
-    static time_t next_change_time2 = 0;
-    time_t tv_sec;
-    tv_sec = lwm2m_gettime();
-    double a[4], b[4],cpu_load;
-    FILE *fp;
-    char value[15];
-    int valueLength,cpu_load_int;
-    lwm2m_uri_t uri;
-    int level = rand() % 100;
-    
-    if (tv_sec < 0) return;
-    
-    if (next_change_time2 < tv_sec)
-    {
-        fp = fopen("/proc/stat","r");
-        fscanf(fp,"%*s %Lf %Lf %Lf %Lf",&a[0],&a[1],&a[2],&a[3]);
-        fclose(fp);
-        sleep(1);
-
-        fp = fopen("/proc/stat","r");
-        fscanf(fp,"%*s %Lf %Lf %Lf %Lf",&b[0],&b[1],&b[2],&b[3]);
-        fclose(fp);
-
-        cpu_load = ((b[0]+b[1]+b[2]) - (a[0]+a[1]+a[2])) / ((b[0]+b[1]+b[2]+b[3]) - (a[0]+a[1]+a[2]+a[3]));
-        //printf("The current CPU utilization is : %Lf\n",cpu_load);
-        cpu_load_int = cpu_load*1000;
-        printf("\nThe current CPU utilization is : %d\n",cpu_load_int);
-        if (lwm2m_stringToUri("/3349/0/5851", 12, &uri))
-        {
-            
-            valueLength = sprintf(value, "%d", cpu_load_int);
-            fprintf(stderr, "\nNew CPU utilization is: %d\n", cpu_load_int);
-            handle_value_changed(context, &uri, value, valueLength);
-        }
-
-        level = rand() % 20;
-        if (0 > level) level = -level;
-        next_change_time2 = tv_sec + level;
-    }
-}
-
-static void calculate_cpu_avgload(lwm2m_context_t * context){
-    static time_t next_change_time2 = 0;
-    time_t tv_sec;
-    tv_sec = lwm2m_gettime();
-    double cpu_load[3];
-    /*
-    load[0] = cpu load averaged over 1 min
-    load[1] = cpu load averaged over 5 min
-    load[2] = cpu load averaged over 15 min
-    */
-    FILE *fp;
-    char value[15];
-    int valueLength,tempload;
-    lwm2m_uri_t uri;
-    int level = rand() % 100;
-    
-    if (tv_sec < 0) return;
-    
-    if (next_change_time2 < tv_sec)
-    {
-        if (getloadavg(cpu_load, 3) != -1)
-        {  
-   	        printf("load average : %f , %f , %f\n", cpu_load[0],cpu_load[1],cpu_load[2]);
-        }
-
-        
-     
-        if (lwm2m_stringToUri("/3349/0/5852", 12, &uri))
-        {
-            tempload = cpu_load[0]*100;
-            valueLength = sprintf(value, "%d", tempload);
-            fprintf(stderr, "\nNew CPU Load Avg 1min is: %d\n", tempload);
-            handle_value_changed(context, &uri, value, valueLength);
-        }
-        
-        if (lwm2m_stringToUri("/3349/0/5853", 12, &uri))
-        {
-            tempload = cpu_load[1]*100;
-            valueLength = sprintf(value, "%d", tempload);
-            fprintf(stderr, "\nNew CPU Load Avg 5min is: %d\n", tempload);
-            handle_value_changed(context, &uri, value, valueLength);
-        }
-        
-        if (lwm2m_stringToUri("/3349/0/5854", 12, &uri))
-        {
-            tempload = cpu_load[2]*100;
-            valueLength = sprintf(value, "%d", tempload);
-            fprintf(stderr, "\nNew CPU Load Avg 15min is: %d\n", tempload);
-            handle_value_changed(context, &uri, value, valueLength);
-        }
-
-        level = rand() % 20;
-        if (0 > level) level = -level;
-        next_change_time2 = tv_sec + level;
+        next_change_time = tv_sec + level + 10;
     }
 }
 
@@ -688,22 +564,22 @@ static void prv_add(char * buffer,
     lwm2m_object_t * objectP;
     int res;
 
-    objectP = get_object_performance();
+    objectP = get_test_object();
     if (objectP == NULL)
     {
-        fprintf(stdout, "Creating object 3349 failed.\r\n");
+        fprintf(stdout, "Creating object 31024 failed.\r\n");
         return;
     }
     res = lwm2m_add_object(lwm2mH, objectP);
     if (res != 0)
     {
-        fprintf(stdout, "Adding object 3349 failed: ");
+        fprintf(stdout, "Adding object 31024 failed: ");
         print_status(stdout, res);
         fprintf(stdout, "\r\n");
     }
     else
     {
-        fprintf(stdout, "Object 3349 added.\r\n");
+        fprintf(stdout, "Object 31024 added.\r\n");
     }
     return;
 }
@@ -714,16 +590,16 @@ static void prv_remove(char * buffer,
     lwm2m_context_t * lwm2mH = (lwm2m_context_t *)user_data;
     int res;
 
-    res = lwm2m_remove_object(lwm2mH, 3349);
+    res = lwm2m_remove_object(lwm2mH, 31024);
     if (res != 0)
     {
-        fprintf(stdout, "Removing object 3349 failed: ");
+        fprintf(stdout, "Removing object 31024 failed: ");
         print_status(stdout, res);
         fprintf(stdout, "\r\n");
     }
     else
     {
-        fprintf(stdout, "Object 3349 removed.\r\n");
+        fprintf(stdout, "Object 31024 removed.\r\n");
     }
     return;
 }
@@ -778,7 +654,7 @@ static void prv_display_objects(char * buffer,
             case LWM2M_CONN_STATS_OBJECT_ID:
                 break;
             case TEST_OBJECT_ID:
-                display_performance_object(object);
+                display_test_object(object);
                 break;
             }
         }
@@ -933,7 +809,7 @@ int main(int argc, char *argv[])
     const char * localPort = "56830";
     const char * server = NULL;
     const char * serverPort = LWM2M_STANDARD_PORT_STR;
-    char * name = "testlwm2mclient";
+    char * name = "customlwm2mclient";
     int lifetime = 300;
     int batterylevelchanging = 1;
     time_t reboot_time = 0;
@@ -974,8 +850,8 @@ int main(int argc, char *argv[])
             {"disp", "Display current objects/instances/resources", NULL, prv_display_objects, NULL},
             {"dump", "Dump an Object", "dump URI"
                                        "URI: uri of the Object or Instance such as /3/0, /1\r\n", prv_object_dump, NULL},
-            {"add", "Add support of object 3349", NULL, prv_add, NULL},
-            {"rm", "Remove support of object 3349", NULL, prv_remove, NULL},
+            {"add", "Add support of object 31024", NULL, prv_add, NULL},
+            {"rm", "Remove support of object 31024", NULL, prv_remove, NULL},
             {"quit", "Quit the client gracefully.", NULL, prv_quit, NULL},
             {"^C", "Quit the client abruptly (without sending a de-register message).", NULL, NULL, NULL},
 
@@ -1165,21 +1041,63 @@ int main(int argc, char *argv[])
         return -1;
     }
 
-    objArray[3] = get_object_conn_s();
+    objArray[3] = get_object_firmware();
     if (NULL == objArray[3])
     {
-        fprintf(stderr, "Failed to create connectivity statistics object\r\n");
+        fprintf(stderr, "Failed to create Firmware object\r\n");
         return -1;
     }
 
-    objArray[4] = get_object_performance();
+    objArray[4] = get_object_location();
     if (NULL == objArray[4])
+    {
+        fprintf(stderr, "Failed to create location object\r\n");
+        return -1;
+    }
+
+    objArray[5] = get_test_object();
+    if (NULL == objArray[5])
     {
         fprintf(stderr, "Failed to create test object\r\n");
         return -1;
     }
 
+    objArray[6] = get_object_conn_m();
+    if (NULL == objArray[6])
+    {
+        fprintf(stderr, "Failed to create connectivity monitoring object\r\n");
+        return -1;
+    }
+
+    objArray[7] = get_object_conn_s();
+    if (NULL == objArray[7])
+    {
+        fprintf(stderr, "Failed to create connectivity statistics object\r\n");
+        return -1;
+    }
+
     int instId = 0;
+    objArray[8] = acc_ctrl_create_object();
+    if (NULL == objArray[8])
+    {
+        fprintf(stderr, "Failed to create Access Control object\r\n");
+        return -1;
+    }
+    else if (acc_ctrl_obj_add_inst(objArray[8], instId, 3, 0, serverId)==false)
+    {
+        fprintf(stderr, "Failed to create Access Control object instance\r\n");
+        return -1;
+    }
+    else if (acc_ctrl_oi_add_ac_val(objArray[8], instId, 0, 0b000000000001111)==false)
+    {
+        fprintf(stderr, "Failed to create Access Control ACL default resource\r\n");
+        return -1;
+    }
+    else if (acc_ctrl_oi_add_ac_val(objArray[8], instId, 999, 0b000000000000001)==false)
+    {
+        fprintf(stderr, "Failed to create Access Control ACL resource for serverId: 999\r\n");
+        return -1;
+    }
     /*
      * The liblwm2m library is now initialized with the functions that will be in
      * charge of communication
@@ -1256,10 +1174,7 @@ int main(int argc, char *argv[])
         }
         else if (batterylevelchanging)
         {
-            //update_battery_level(lwm2mH);
-            calculate_cpu_temp(lwm2mH);
-            calculate_cpu_loadavg(lwm2mH);
-            calculate_cpu_avgload(lwm2mH);
+            update_battery_level(lwm2mH);
             tv.tv_sec = 5;
         }
         else
@@ -1401,7 +1316,7 @@ int main(int argc, char *argv[])
 #else
                         lwm2m_handle_packet(lwm2mH, buffer, numBytes, connP);
 #endif
-                        conn_s_updateRxStatistic(objArray[3], numBytes, false);
+                        conn_s_updateRxStatistic(objArray[7], numBytes, false);
                     }
                     else
                     {
@@ -1460,8 +1375,12 @@ int main(int argc, char *argv[])
     clean_server_object(objArray[1]);
     lwm2m_free(objArray[1]);
     free_object_device(objArray[2]);
-     free_object_conn_s(objArray[3]);
-     free_object_performance(objArray[4]);
+    free_object_firmware(objArray[3]);
+    free_object_location(objArray[4]);
+    free_test_object(objArray[5]);
+    free_object_conn_m(objArray[6]);
+    free_object_conn_s(objArray[7]);
+   acl_ctrl_free_object(objArray[8]);
 
 #ifdef MEMORY_TRACE
     if (g_quit == 1)
